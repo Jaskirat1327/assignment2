@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- Name: Jaskirat Singh          Student number:301274619 -->
+<link rel = "icon" href = "/images/J.jpg" type = "image/x-icon">
+<link rel="stylesheet" href="/Content/style.css">
+    <body>
+        <header>
+         <u>Express Portfolio Site</u>
+         <img src="/IMAGES/J.jpg" alt="icon" width="60pt" height="60pt">
+        </header> 
+        <HR>  
+        <NAV>                     
+            <a href="/home">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="/about";>About me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/projects";>Project Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/services";>Services Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/contacts">Contact Me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/login">Login</a>&nbsp;&nbsp;&nbsp;
+           </NAV>
+           <hr>
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Contact Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Contact name"
+                    name="contactname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberTextField">Contact Number</label>
+                    <input type="text" class="form-control"
+                    id="numberTextField"
+                    placeholder="Enter your Contact Number"
+                    name="contactnumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailaddressTextArea" class="form-label">Email address</label>
+                    <input type="email" class="form-control" value="" name="emailaddress" id="emailaddressTextArea" placeholder="Valid Email" required>
+                  </div>
+
+                
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/contact-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                
+            </form>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <p><a href="mailto:jsin1598@my.centennialcollege.ca">Email:jsin1598@my.centennialcollege.ca</a></p>
+    Copyright&copy &nbsp; Name: Jaskirat Singh, Student number:301274619 
+    <img src="../Images/footer-art.svg" alt="footer">
+  </footer>      
+</html>

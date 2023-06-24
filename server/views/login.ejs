@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- Name: Jaskirat Singh          Student number:301274619 -->
+<link rel = "icon" href = "/images/J.jpg" type = "image/x-icon">
+<link rel="stylesheet" href="/Content/style.css">
+    <body>
+        <header>
+         <u>Express Portfolio Site</u>
+         <img src="/IMAGES/J.jpg" alt="icon" width="60pt" height="60pt">
+        </header> 
+        <HR>  
+        <NAV>                     
+            <a href="/home">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="/about";>About me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/projects";>Project Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/services";>Services Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/contacts">Contact Me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/login">Login</a>&nbsp;&nbsp;&nbsp;
+           </NAV>
+           <hr>
+<body>
+<main class="container">
+    <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+    <% } %>
+
+    <div class="row">
+        <div class="offset-md-4 col-md-4 text-white">
+            <div class="login-form-wrapper" style="background-color: white; box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.2); color: black;padding: 10px 10px 10px 10px; height: 500px; width: 400px;"> <!-- Added border and box-shadow style -->
+                <h1> Login</h1>
+                <img src="Assets/images/039b004617d1ef43cf1769aae45d6ea2.png" alt="Logo" class="logo" height="170" width="200" style="margin-left: 80px;">
+                <form method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control"
+                        name="username" placeholder="Enter username"
+                        id="username" required autofocus>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control"
+                        name="password" placeholder="Enter password"
+                        id="password" required>
+                        
+                    </fieldset>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Login">
+                        <a href="/">
+                            <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div> <!-- Closing div wrapper -->
+        </div>
+    </div>
+
+</main>
+</body>
+<br>
+<br>
+<br>
+<br><br><br><br><br>
+<br><br><br><br>
+<footer>
+    <p><a href="mailto:jsin1598@my.centennialcollege.ca">Email:jsin1598@my.centennialcollege.ca</a></p>
+    Copyright&copy &nbsp; Name: Jaskirat Singh, Student number:301274619 
+    <img src="../Images/footer-art.svg" alt="footer">
+  </footer>      
+</html>

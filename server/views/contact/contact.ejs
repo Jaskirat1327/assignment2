@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- Name: Jaskirat Singh          Student number:301274619 -->
+<link rel = "icon" href = "/images/J.jpg" type = "image/x-icon">
+<link rel="stylesheet" href="/Content/style.css">
+    <body>
+        <header>
+         <u>Express Portfolio Site</u>
+         <img src="/IMAGES/J.jpg" alt="icon" width="60pt" height="60pt">
+        </header> 
+        <HR>  
+        <NAV>                     
+            <a href="/home">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="/about";>About me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/projects";>Project Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/services";>Services Page</a>&nbsp;&nbsp;&nbsp;
+            <a href="/contacts">Contact Me</a>&nbsp;&nbsp;&nbsp;
+            <a href="/login">Login</a>&nbsp;&nbsp;&nbsp;
+           </NAV>
+           <hr>
+<body>
+    <main class="container" style="font-size: 20px;" >
+        <div class="row">
+            <div class="offset-md-1 col-md-11">
+                <h1><%= title %></h1>
+    
+                <% if(typeof displayName == 'string' && displayName) { %>
+                    <a href="/contact-list/add" class="btn btn-primary" role="button" style="font-size: 25px; text-align: center;">
+                    <i class="fas fa-plus-circle"></i> Add a Contact</a>
+                <% } %>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row-->
+                    <tr class="d-flex">
+                        <% if(typeof displayName == 'string' && displayName) { %>
+                            <th class="text-center col-2">Contact Name</th>
+                            <th class="text-center col-2">Contact Number</th>
+                            <th class="text-center col-3">Email Address</th>
+                            
+                            <th class="text-center col-1"></th>
+                            <th class="text-center col-1"></th>
+                        <% } else { %>
+                            <th class="text-center col-2">Contact Name</th>
+                            <th class="text-center col-2">Contact Number</th>
+                            <th class="text-center col-3">Email Address</th>
+                        <% } %>
+                    </tr>
+    
+                    <!-- Repeatable Template Row -->
+    
+                    <% for(let count = 0; count < contactList.length; count++) { %>
+                        <tr class="d-flex">
+                            <% if(typeof displayName == 'string' && displayName) { %>
+                                <td class="text-center col-2"><%= contactList[count].contactname %></td>
+                                <td class="text-center col-2"><%= contactList[count].contactnumber %></td>
+                                <td class="text-center col-3"><%= contactList[count].emailaddress %></td>          
+                                <td class="text-center col-1">
+                                    <a href="/contact-list/edit/<%= contactList[count]._id %>" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                                </td>
+                                <td class="text-center col-1">
+                                    <a href="/contact-list/delete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Delete</a>
+                                </td>
+                             <% } else { %>
+                                <td class="text-center col-2"><%= contactList[count].contactname %></td>
+                                <td class="text-center col-2"><%= contactList[count].contactnumber %></td>
+                                <td class="text-center col-1"><%= contactList[count].emailaddress %></td> 
+                             <% } %>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+      </main>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+<footer>
+    <p><a href="mailto:jsin1598@my.centennialcollege.ca">Email:jsin1598@my.centennialcollege.ca</a></p>
+    Copyright&copy &nbsp; Name: Jaskirat Singh, Student number:301274619 
+    <img src="../Images/footer-art.svg" alt="footer">
+  </footer>      
+</html>
